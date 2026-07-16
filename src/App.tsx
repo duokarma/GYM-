@@ -37,7 +37,7 @@ function PageFallback() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Toaster position="top-right" richColors closeButton />
       <Suspense fallback={<PageFallback />}>
         <Routes>
